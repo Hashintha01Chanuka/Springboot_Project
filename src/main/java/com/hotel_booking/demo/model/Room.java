@@ -14,5 +14,6 @@ public class Room {
 
     public Room() {
         this.bookings = new ArrayList<>();
+
     }
 }
