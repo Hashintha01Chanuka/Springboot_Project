@@ -19,6 +19,8 @@ public class BookedRoom {
 
         private int totalNumOfGuest;
 
+        private String bookingConfirmationCode;
 
+        private Room room;
 
 }
