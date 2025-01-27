@@ -23,4 +23,8 @@ public class BookedRoom {
 
         private Room room;
 
+        public void calculateTotalNumberOfGuest(){
+                this.totalNumOfGuest = this.NumOfAdults + NumOfChildren ;
+        }
+
 }
