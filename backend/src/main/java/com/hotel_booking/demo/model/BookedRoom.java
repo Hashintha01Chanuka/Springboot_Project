@@ -27,4 +27,11 @@ public class BookedRoom {
                 this.totalNumOfGuest = this.NumOfAdults + NumOfChildren ;
         }
 
+        public void setNumOfAdults(int numOfAdults) {
+                NumOfAdults = numOfAdults;
+        }
+
+        public void setNumOfChildren(int numOfChildren) {
+                NumOfChildren = numOfChildren;
+        }
 }
