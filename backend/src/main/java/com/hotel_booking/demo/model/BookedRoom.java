@@ -29,9 +29,11 @@ public class BookedRoom {
 
         public void setNumOfAdults(int numOfAdults) {
                 NumOfAdults = numOfAdults;
+                calculateTotalNumberOfGuest();
         }
 
         public void setNumOfChildren(int numOfChildren) {
                 NumOfChildren = numOfChildren;
+                calculateTotalNumberOfGuest();
         }
 }
