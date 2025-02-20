@@ -1,6 +1,6 @@
 package com.hotel_booking.demo.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,24 +15,36 @@ import java.time.LocalDate;
 @NoArgsConstructor
 
 public class BookedRoom {
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long bookingId;
 
+        @Column(name = "check_In")
         private LocalDate checkInDate;
 
+        @Column(name = "check_Out")
         private LocalDate checkOutDate;
-        
+
+        @Column(name = "guest_FullName")
         private String guestFullName;
 
+        @Column(name = "guest_Email")
         private String guestEmail;
 
+        @Column(name = "adults")
         private int NumOfAdults;
 
+        @Column(name = "children")
         private int NumOfChildren;
 
+        @Column(name = "total_guest")
         private int totalNumOfGuest;
 
+        @Column(name = "confirmation_code")
         private String bookingConfirmationCode;
 
+        @JoinColumn(name = "room_id")
         private Room room;
 
         public void calculateTotalNumberOfGuest(){
